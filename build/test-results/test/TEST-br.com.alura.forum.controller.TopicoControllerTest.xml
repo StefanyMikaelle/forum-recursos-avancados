@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.alura.forum.controller.TopicoControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-02T22:38:55.332Z" hostname="DESKTOP-3D0LFP3" time="10.212">
+  <properties/>
+  <testcase name="deve retornar 200 quando chamar topicos com token()" classname="br.com.alura.forum.controller.TopicoControllerTest" time="2.574"/>
+  <testcase name="deve retornar 400 quando chamar topicos sem token()" classname="br.com.alura.forum.controller.TopicoControllerTest" time="0.025"/>
+  <testcase name="deve retornar codigo 200 quando chamar topico id com token()" classname="br.com.alura.forum.controller.TopicoControllerTest" time="0.046"/>
+  <system-out><![CDATA[2026-11-02T19:38:55.336-03:00  INFO 14292 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.com.alura.forum.controller.TopicoControllerTest]: TopicoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-02T19:38:55.372-03:00  INFO 14292 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.com.alura.forum.ForumApplication for test class br.com.alura.forum.controller.TopicoControllerTest
+2026-11-02T19:38:55.377-03:00  INFO 14292 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.com.alura.forum.controller.TopicoControllerTest]: TopicoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-02T19:38:55.384-03:00  INFO 14292 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.com.alura.forum.ForumApplication for test class br.com.alura.forum.controller.TopicoControllerTest
+2026-11-02T19:38:55.474-03:00  INFO 14292 --- [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-11-02T19:38:55.483-03:00  INFO 14292 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-11-02T19:38:55.507-03:00  INFO 14292 --- [    Test worker] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-11-02T19:38:56.818-03:00  INFO 14292 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=npipe:////./pipe/dockerDesktopLinuxEngine
+2026-11-02T19:38:56.821-03:00  INFO 14292 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2026-11-02T19:38:56.860-03:00  INFO 14292 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.4.1
+  API Version: 1.54
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4855 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-11-02T19:38:57.172-03:00  INFO 14292 --- [    Test worker] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-11-02T19:38:57.834-03:00  INFO 14292 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2026-11-02T19:38:58.121-03:00  INFO 14292 --- [    Test worker] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 16345b300295caae0783641dd674423b218f637d15d8f9a51fa41e1fc497b255
+2026-11-02T19:38:58.924-03:00  INFO 14292 --- [    Test worker] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT1.7528787S
+2026-11-02T19:38:58.943-03:00  INFO 14292 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-11-02T19:38:58.944-03:00  INFO 14292 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-11-02T19:38:58.946-03:00  INFO 14292 --- [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2026-11-02T19:38:58.948-03:00  INFO 14292 --- [    Test worker] tc.redis:7-alpine                        : Creating container for image: redis:7-alpine
+2026-11-02T19:38:59.243-03:00  INFO 14292 --- [    Test worker] tc.redis:7-alpine                        : Container redis:7-alpine is starting: 3dba69d3c871e8fb60cd81413d5838df55c8257c573223bce08b88637e7cbdba
+2026-11-02T19:38:59.997-03:00  INFO 14292 --- [    Test worker] tc.redis:7-alpine                        : Container redis:7-alpine started in PT1.04897S
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-11-02T19:39:00.091-03:00  INFO 14292 --- [    Test worker] b.c.a.f.controller.TopicoControllerTest  : Starting TopicoControllerTest using Java 17.0.19 with PID 14292 (started by phenr in D:\Stefany\forum-recursos-avancados)
+2026-11-02T19:39:00.092-03:00  INFO 14292 --- [    Test worker] b.c.a.f.controller.TopicoControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-11-02T19:39:00.770-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-02T19:39:00.770-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-02T19:39:00.820-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2026-11-02T19:39:00.831-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-02T19:39:00.831-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-02T19:39:00.848-03:00  INFO 14292 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface br.com.alura.forum.repository.CursoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-02T19:39:00.849-03:00  INFO 14292 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface br.com.alura.forum.repository.RespostaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-02T19:39:00.850-03:00  INFO 14292 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface br.com.alura.forum.repository.TopicoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-02T19:39:00.851-03:00  INFO 14292 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface br.com.alura.forum.repository.UsuarioRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-02T19:39:00.851-03:00  INFO 14292 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-11-02T19:39:01.475-03:00  INFO 14292 --- [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-02T19:39:01.516-03:00  INFO 14292 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-02T19:39:01.517-03:00  INFO 14292 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-11-02T19:39:01.707-03:00  INFO 14292 --- [    Test worker] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1610 ms
+2026-11-02T19:39:01.934-03:00  INFO 14292 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-02T19:39:01.939-03:00  INFO 14292 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:1942667a-fe6b-4dfe-9624-fc0a2e24d8ec user=SA
+2026-11-02T19:39:01.939-03:00  INFO 14292 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-02T19:39:01.940-03:00  INFO 14292 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:1942667a-fe6b-4dfe-9624-fc0a2e24d8ec (H2 2.4)
+2026-11-02T19:39:01.953-03:00  WARN 14292 --- [    Test worker] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-11-02T19:39:01.974-03:00  INFO 14292 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-11-02T19:39:01.975-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.016s)
+2026-11-02T19:39:01.978-03:00  INFO 14292 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-11-02T19:39:01.989-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-11-02T19:39:01.994-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create table curso"
+2026-11-02T19:39:02.007-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create table usuario"
+2026-11-02T19:39:02.019-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create table topico"
+2026-11-02T19:39:02.036-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - create table resposta"
+2026-11-02T19:39:02.051-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - alter table usuario add password"
+2026-11-02T19:39:02.067-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "6 - insert password usuario"
+2026-11-02T19:39:02.076-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "7 - create table role"
+2026-11-02T19:39:02.088-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "8 - create table usuario role"
+2026-11-02T19:39:02.101-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "9 - inset topico"
+2026-11-02T19:39:02.108-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "10 - insert info usuario role usuario role"
+2026-11-02T19:39:02.117-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "11 - add data alteracao topico"
+2026-11-02T19:39:02.140-03:00  INFO 14292 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 11 migrations to schema "PUBLIC", now at version v11 (execution time 00:00.060s)
+2026-11-02T19:39:02.178-03:00  INFO 14292 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-02T19:39:02.231-03:00  INFO 14292 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-02T19:39:02.234-03:00  INFO 14292 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:1942667a-fe6b-4dfe-9624-fc0a2e24d8ec]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 1942667A-FE6B-4DFE-9624-FC0A2E24D8EC/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-02T19:39:02.395-03:00  INFO 14292 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-02T19:39:02.397-03:00  INFO 14292 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-02T19:39:02.553-03:00  WARN 14292 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-02T19:39:02.612-03:00  INFO 14292 --- [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-11-02T19:39:02.612-03:00  WARN 14292 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-11-02T19:39:02.885-03:00  INFO 14292 --- [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56001 (http) with context path '/'
+2026-11-02T19:39:02.891-03:00  INFO 14292 --- [    Test worker] b.c.a.f.controller.TopicoControllerTest  : Started TopicoControllerTest in 2.87 seconds (process running for 30.565)
+2026-11-02T19:39:03.191-03:00  INFO 14292 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-11-02T19:39:03.192-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-02T19:39:03.196-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+>>> 1. Header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVmYW55QGVtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTc5MzY1OTIwM30.qFxUOT2yPFcEb5KMZwu2rSgvSar1DmEFzCaq9YLqytV60eTC3-pz14HdTxaZxO_Fq7wf_HIxTy2TQHqOF7jdsQ
+>>> 2. JWT extraído: eyJhbGciOiJIUzUxMiJ9
+Usuário: stefany@email.com
+Authorities: Usuario(id=1, nome=Stefany Mikaelle, email=stefany@email.com, password=$2a$12$vMENn8HBF3hn/aJcylswSuVMm4Ce38BZzUvBW4DPsEyLmMIp4k.wu, role=[Role(id=1, nome=LEITURA_ESCRITA)])
+>>> 3. autenticado=true, authorities=[Role(id=1, nome=LEITURA_ESCRITA)]
+2026-11-02T19:39:05.222-03:00  WARN 14292 --- [    Test worker] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /topicos
+       Parameters = {}
+          Headers = [Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVmYW55QGVtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTc5MzY1OTIwM30.qFxUOT2yPFcEb5KMZwu2rSgvSar1DmEFzCaq9YLqytV60eTC3-pz14HdTxaZxO_Fq7wf_HIxTy2TQHqOF7jdsQ"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = br.com.alura.forum.controller.TopicoController
+           Method = br.com.alura.forum.controller.TopicoController#listar(String, Pageable)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json
+             Body = {"content":[{"id":1,"titulo":"Duvida sobre kotlin","mensagem":"Minha funcao let nao funciona","status":"NAO_RESPONDIDO","dataCriacao":"2021-12-24T12:00:00","dataAlteracao":null}],"empty":false,"first":true,"last":true,"number":0,"numberOfElements":1,"pageable":{"offset":0,"pageNumber":0,"pageSize":5,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":5,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":1,"totalPages":1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-11-02T19:39:05.477-03:00  INFO 14292 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-11-02T19:39:05.478-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-02T19:39:05.486-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+>>> 1. Header: null
+>>> 2. JWT extraído: null
+2026-11-02T19:39:05.506-03:00  INFO 14292 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-11-02T19:39:05.506-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-02T19:39:05.511-03:00  INFO 14292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+>>> 1. Header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVmYW55QGVtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTc5MzY1OTIwNX0.2k4sqPJECMzKaEC8FMikSxdOYN3st6ApAqpjVuZAuu01pxgmV90JYAsdfZh2rhY6n-5XiRWjCtEP8Tz8CotNYg
+>>> 2. JWT extraído: eyJhbGciOiJIUzUxMiJ9
+Usuário: stefany@email.com
+Authorities: Usuario(id=1, nome=Stefany Mikaelle, email=stefany@email.com, password=$2a$12$vMENn8HBF3hn/aJcylswSuVMm4Ce38BZzUvBW4DPsEyLmMIp4k.wu, role=[Role(id=1, nome=LEITURA_ESCRITA)])
+>>> 3. autenticado=true, authorities=[Role(id=1, nome=LEITURA_ESCRITA)]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

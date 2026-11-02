@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.alura.br.com.alura.forum.service.TopicoServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-02T22:38:34.782Z" hostname="DESKTOP-3D0LFP3" time="4.267">
+  <properties/>
+  <testcase name="deve listar topico por nome do curso()" classname="br.com.alura.br.com.alura.forum.service.TopicoServiceTest" time="0.345"/>
+  <testcase name="deve listar todos os topicos quando nome do curso for nulo()" classname="br.com.alura.br.com.alura.forum.service.TopicoServiceTest" time="0.034"/>
+  <testcase name="deve lancar excecao se nao achar topico por id()" classname="br.com.alura.br.com.alura.forum.service.TopicoServiceTest" time="0.191"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
