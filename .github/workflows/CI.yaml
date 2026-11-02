@@ -29,12 +29,5 @@ jobs:
       - name: Dar permissão ao Gradle Wrapper
         run: chmod +x gradlew
 
-      - name: Cache de dependencias
-        uses: actions/cache@v1
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}--m2-$-{{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}--m2
-
       - name: Executar testes automatizados
         run: ./gradlew clean test
